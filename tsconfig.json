@@ -1,8 +1,18 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "types": [
+      "@types/react",
+      "@types/react-native"
+    ],
     "strict": true,
     "paths": {
+      "@firebase/auth": [
+        "./node_modules/@firebase/auth/dist/index.rn.d.ts"
+      ],
+      "@env": [
+        "./types/env.d.ts"
+      ],
       "@/*": [
         "./*"
       ]
@@ -12,6 +22,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "metro.config.js",
+    "nativewind-env.d.ts"
   ]
 }
